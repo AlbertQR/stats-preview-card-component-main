@@ -1,0 +1,133 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #090b1a;
+  font-family: "Lexend Deca";
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: "image" "text";
+  max-width: 76rem;
+  min-height: 30.5rem;
+  margin: 5.5rem 1.5rem;
+  background-color: #1b1938;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+main .image-content {
+  grid-area: image;
+  background-image: url("../images/image-header-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #aa5cdb;
+  background-blend-mode: multiply
+}
+
+main .text-content {
+  grid-area: text;
+  text-align: center;
+  padding: 2.75rem 1rem 2.5rem 1rem;
+}
+
+main .text-content__title {
+  color: #fff;
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+main .text-content__title .resaltado {
+  color: #aa5cdb
+}
+
+main .text-content__text {
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 1.375rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+main .text-content__stats {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 4.25rem;
+  text-transform: uppercase;
+}
+
+main .text-content__stats .stat {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+main .text-content__stats .stat__aceptation {
+  color: #fff;
+  display: block;
+  font-weight: 700;
+  font-size: 1.35rem;
+}
+
+main .text-content__stats .stat__text {
+  display: block;
+  margin-top: .35rem;
+  font-weight: 400;
+  font-size: 0.95rem;
+  font-variant-caps: all-small-caps;
+}
+
+
+@media screen and (min-width: 992px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "text image";
+    margin-top: calc((100vh - 30.5rem)/2);
+  }
+
+  main .image-content {
+    background-image: url("../images/image-header-desktop.jpg");
+    max-width: 38rem;
+  }
+
+  main .text-content {
+    text-align: left;
+    padding: 4.5rem 7rem 4.5rem 4rem;
+  }
+
+  main .text-content__title {
+    font-size: 2.2rem;
+  }
+
+  main .text-content__text {
+    font-size: 1rem;
+    margin-top: 1.75rem;
+  }
+
+  main .text-content__stats {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-right: 1.5rem;
+  }
+
+  main .text-content__stats .stat__aceptation {
+    font-size: 1.8rem;
+  }
+  
+  main .text-content__stats .stat__text {
+    font-size: 1.2rem;
+  }
+}
