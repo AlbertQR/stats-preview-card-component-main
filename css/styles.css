@@ -7,19 +7,23 @@
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #090b1a;
   font-family: "Lexend Deca";
 }
 
 main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 2fr;
   grid-template-areas: "image" "text";
-  max-width: 76rem;
+  max-width: 72rem;
   min-height: 30.5rem;
   margin: 5.5rem 1.5rem;
   background-color: #1b1938;
@@ -27,7 +31,7 @@ main {
   overflow: hidden;
 }
 
-main .image-content {
+.card .image-content {
   grid-area: image;
   background-image: url("../images/image-header-mobile.jpg");
   background-repeat: no-repeat;
@@ -36,32 +40,32 @@ main .image-content {
   background-blend-mode: multiply
 }
 
-main .text-content {
+.card .text-content {
   grid-area: text;
   text-align: center;
   padding: 2.75rem 1rem 2.5rem 1rem;
 }
 
-main .text-content__title {
+.card .text-content__title {
   color: #fff;
   font-size: 1.9rem;
   font-weight: 700;
   line-height: 1.3;
 }
 
-main .text-content__title .resaltado {
+.card .text-content__title .resaltado {
   color: #aa5cdb
 }
 
-main .text-content__text {
+.card .text-content__text {
   color: rgba(255, 255, 255, 0.75);
   margin-top: 1.375rem;
   font-size: 1rem;
   line-height: 1.7;
-  font-weight: 400;
+  font-weight: 500;
 }
 
-main .text-content__stats {
+.card .text-content__stats {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -70,18 +74,18 @@ main .text-content__stats {
   text-transform: uppercase;
 }
 
-main .text-content__stats .stat {
+.card .text-content__stats .stat {
   color: rgba(255, 255, 255, 0.6);
 }
 
-main .text-content__stats .stat__aceptation {
+.card .text-content__stats .stat__aceptation {
   color: #fff;
   display: block;
   font-weight: 700;
   font-size: 1.35rem;
 }
 
-main .text-content__stats .stat__text {
+.card .text-content__stats .stat__text {
   display: block;
   margin-top: .35rem;
   font-weight: 400;
@@ -91,43 +95,42 @@ main .text-content__stats .stat__text {
 
 
 @media screen and (min-width: 992px) {
-  main {
+  .card {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     grid-template-areas: "text image";
-    margin-top: calc((100vh - 30.5rem)/2);
   }
 
-  main .image-content {
+  .card .image-content {
     background-image: url("../images/image-header-desktop.jpg");
     max-width: 38rem;
   }
 
-  main .text-content {
+  .card .text-content {
     text-align: left;
     padding: 4.5rem 7rem 4.5rem 4rem;
   }
 
-  main .text-content__title {
+  .card .text-content__title {
     font-size: 2.2rem;
   }
 
-  main .text-content__text {
+  .card .text-content__text {
     font-size: 1rem;
     margin-top: 1.75rem;
   }
 
-  main .text-content__stats {
+  .card .text-content__stats {
     flex-flow: row wrap;
     justify-content: space-between;
     padding-right: 1.5rem;
   }
 
-  main .text-content__stats .stat__aceptation {
+  .card .text-content__stats .stat__aceptation {
     font-size: 1.8rem;
   }
   
-  main .text-content__stats .stat__text {
+  .card .text-content__stats .stat__text {
     font-size: 1.2rem;
   }
 }
