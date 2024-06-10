@@ -23,8 +23,7 @@ main {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 2fr;
   grid-template-areas: "image" "text";
-  max-width: 72rem;
-  min-height: 30.5rem;
+  max-width: 71rem;
   margin: 5.5rem 1.5rem;
   background-color: #1b1938;
   border-radius: 0.5rem;
